@@ -1,0 +1,14 @@
+{
+  "defaultTtlSeconds": 30,
+  "records": {
+    "api.example.com": {
+      "default": { "A": ["203.0.113.10"], "AAAA": ["2001:db8::10"] },
+      "JP,KR,TW": { "A": ["203.0.113.20"], "AAAA": ["2001:db8::20"] },
+      "HK": { "A": ["203.0.113.30"] },
+      "SG,MY,TH,VN,PH,ID": { "A": ["203.0.113.40", "203.0.113.41"] }
+    },
+    "login.example.com": {
+      "default": { "A": ["198.51.100.5"], "ttl": 300 }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile>
+  <diagram id="diagram-1" name="Architecture">
+    <mxGraphModel page="0" pageWidth="1360" pageHeight="580" pageScale="1" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="client_app" value="Client app" parent="1" vertex="1"
+          style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;labelBackgroundColor=none;shape=mxgraph.aws4.mobile_client;">
+          <mxGeometry x="50" y="173" width="41" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="aws_cloud" value="AWS Cloud" parent="1" vertex="1"
+          style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;verticalAlign=top;align=left;spacingLeft=30;labelBackgroundColor=none;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;fontColor=#232F3E;dashed=0;">
+          <mxGeometry x="180" y="40" width="1140" height="400" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="waf" value="AWS WAF" parent="aws_cloud" vertex="1"
+          style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#DD344C;labelBackgroundColor=none;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;">
+          <mxGeometry x="70" y="140" width="64" height="64" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cloudfront" value="Amazon CloudFront" parent="aws_cloud" vertex="1"
+          style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#8C4FFF;labelBackgroundColor=none;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;">
+          <mxGeometry x="250" y="140" width="64" height="64" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cf_function" value="CloudFront Functions" parent="aws_cloud" vertex="1"
+          style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;labelBackgroundColor=none;shape=mxgraph.aws4.cloudfront_functions;">
+          <mxGeometry x="430" y="133" width="78" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="kvs" value="CloudFront KeyValueStore" parent="aws_cloud" vertex="1"
+          style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;labelBackgroundColor=none;shape=mxgraph.aws4.generic_database;">
+          <mxGeometry x="630" y="133" width="59" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="region" value="Region" parent="aws_cloud" vertex="1"
+          style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;verticalAlign=top;align=left;spacingLeft=30;labelBackgroundColor=none;grIcon=mxgraph.aws4.group_region;strokeColor=#00A4A6;fillColor=none;fontColor=#147EBA;dashed=1;">
+          <mxGeometry x="830" y="40" width="270" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cloudwatch" value="Amazon CloudWatch" parent="region" vertex="1"
+          style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#E7157B;labelBackgroundColor=none;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;">
+          <mxGeometry x="103" y="60" width="64" height="64" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s3" value="Amazon S3" parent="region" vertex="1"
+          style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#7AA116;labelBackgroundColor=none;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;">
+          <mxGeometry x="103" y="190" width="64" height="64" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="operator" value="Operator" parent="1" vertex="1"
+          style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;labelBackgroundColor=none;shape=mxgraph.aws4.user;">
+          <mxGeometry x="921" y="500" width="58" height="58" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_client_waf" value="" edge="1" source="client_app" target="waf" parent="1"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#232F3E;startArrow=classic;startFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_waf_cf" value="" edge="1" source="waf" target="cloudfront" parent="1"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#232F3E;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_cf_fn" value="" edge="1" source="cloudfront" target="cf_function" parent="1"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#232F3E;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fn_kvs" value="" edge="1" source="cf_function" target="kvs" parent="1"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#232F3E;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_operator_kvs" value="" edge="1" source="operator" target="kvs" parent="1"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#232F3E;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
