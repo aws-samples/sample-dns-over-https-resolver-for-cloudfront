@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+
+# Node / CDK
+node_modules/
+*.js
+!jest.config.js
+!cloudfront-functions/**/*.js
+*.d.ts
+cdk.out/
+cdk.context.json
+.cdk.staging/
+
+# Build artifacts
+*.zip
+dist/
+
+# Editor
+.vscode/
+.idea/
+
+# Secrets - never commit
+.env
+*credentials*.json
+*.pem
+*.key
